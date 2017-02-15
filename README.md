@@ -3,7 +3,20 @@
 ## Bootstrapping with [create-react-app](https://github.com/facebookincubator/create-react-app)
 - Created by Facebook
 - Slogan "Create React apps with no build configuration."
-- Saves the hassle of setting up webpack, task runner, dev server, test framework, etc.
+- Saves the hassle of bootstrapping
+  - Build scripts
+    - Create development and production builds
+    - Creates environment variables
+  - Webpack
+    - Combines minified css, minified js, and all other assets into one bundle
+    - ES2016+ transpiling
+  - Dev server
+    - Run `npm start` to spin a development server
+    - Includes hot reloading out of the box (no refresh needed)
+  - Jest
+    - Test framework
+    - Includes `expect` assertions
+  
 
 ## Before Redux
 - Local state in each component
