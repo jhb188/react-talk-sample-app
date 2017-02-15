@@ -10,8 +10,8 @@ const Todo = ({ index, todo, toggleChecked }) => {
                 type="checkbox" />
 
             <span>
-            { todo.get('description') }
-        </span>
+                { todo.get('description') }
+            </span>
         </div>
     );
 };
