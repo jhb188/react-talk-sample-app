@@ -21,9 +21,9 @@
 
   - Container and Presentational Components
     - The majority of components are pure functions
-    - A few components are intermediary components that "connect" to the applicaction state
+    - A few components are intermediary components that "connect" to the application state
     - Avoid class components with state stored in the class
-  
+
     - Benefits:
       - Greatly improved performance due to React lifecycle methods being managed by Redux
       - Even better performance when coupled with Immutable
@@ -31,17 +31,17 @@
       - Easier to reason about
         - State is contained within the application rather than in individual components
         - Data flows one direction throughout your application
-        - Debugging is much easier 
-        
+        - Debugging is much easier
+
 ## Testing
-- Each component has it's own test
+- Each component has its own test
 - Since components are pure testing is simplified
 - Use the Jest test runner
   - Node based
   - Allows mocking functions
   - Has `expect` assertion functions built in
   - Unit testing (not end to end)
-- Very [basic tests](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#testing-components) are easy to implement and can provide some safety with very little effor.
+- Very [basic tests](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#testing-components) are easy to implement and can provide some safety with very little effort.
 
 ## Deployment
 - Use S3 as your webserver
