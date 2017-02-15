@@ -1,4 +1,4 @@
-# Writing a react app the right way
+# Writing a react app the "right way"
 
 ## Bootstrapping with [create-react-app](https://github.com/facebookincubator/create-react-app)
 - Created by Facebook
