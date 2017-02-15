@@ -1,4 +1,4 @@
-# Writing a react app
+# Writing a react app the right way
 
 ## Bootstrapping with [create-react-app](https://github.com/facebookincubator/create-react-app)
 - Created by Facebook
@@ -30,21 +30,35 @@
 
 ## Following the Redux Architecture
 - Components render based on props and do not contain local state
+- The majority of components are pure functions
 - Single application state (does not have to be managed by Redux)
+- Avoid class components with state stored in the class
+  - Although technically not using `this.state` setting properties on your class instance is stateful.
 
-  - Container and Presentational Components
-    - The majority of components are pure functions
-    - A few components are intermediary components that "connect" to the application state
-    - Avoid class components with state stored in the class
+  - Container Component, Presentational Components, and Connected Components
+    - Presentation components
+      - Responsible for how your app looks (rendering html)
+      - Always pure functions
+      
+    - Container components
+      - Render presentation components
+      - Utilize React lifecyle methods
+      
+    - Connected components
+      - Can wrap either container components or presentation components
+      - "connect" to the application state
+      - Should be thought of as separate components from the container or presentation components they wrap
+        - Should be tested differently (and separately) from the components they wrap
+        - Started putting them in separate files
 
-    - Benefits:
-      - Greatly improved performance due to React lifecycle methods being managed by Redux
-      - Even better performance when coupled with Immutable
-      - More control over what is rendered (no uncontrolled inputs)
-      - Easier to reason about
-        - State is contained within the application rather than in individual components
-        - Data flows one direction throughout your application
-        - Debugging is much easier
+  - Benefits:
+    - Greatly improved performance due to React lifecycle methods being managed by Redux
+    - Even better performance when coupled with Immutable
+    - More control over what is rendered (no uncontrolled inputs)
+    - Easier to reason about
+      - State is contained within the application rather than in individual components
+      - Data flows one direction throughout your application
+      - Debugging is much easier
 
 ## Testing
 - Each component has its own test
