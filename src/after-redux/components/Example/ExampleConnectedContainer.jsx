@@ -1,3 +1,4 @@
+// THIS IS AN EXAMPLE OF WHAT NOT TO DO
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
