@@ -5,7 +5,7 @@ import { fetchEmailsFromServer } from '../../redux/todo/actions';
 import Spinner from './Spinner';
 import EmailList from './EmailList';
 
-class ExampleConnectedContainer extends Component {
+class Container extends Component {
     componentDidMount = () => {
         if (!this.props.hasFetchedEmails) {
             this.props.fetchEmailsFromServer();
@@ -32,4 +32,4 @@ export default connect(
         isFetchingEmails: emails.get('isFetching'),
     }),
     { fetchEmailsFromServer }
-)(ExampleConnectedContainer)
+)(Container)
