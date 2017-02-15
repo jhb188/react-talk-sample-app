@@ -1,18 +1,20 @@
 import React, { PropTypes } from 'react';
 import TodoRecord from '../../../../records/Todo';
 
-const Todo = ({ index, todo, toggleChecked }) => (
-    <div>
-        <input
-            checked={ todo.get('checked') }
-            onChange={ () => { toggleChecked(index) } }
-            type="checkbox" />
+const Todo = ({ index, todo, toggleChecked }) => {
+    return (
+        <div>
+            <input
+                checked={ todo.get('checked') }
+                onChange={ () => { toggleChecked(index) } }
+                type="checkbox" />
 
-        <span>
+            <span>
             { todo.get('description') }
         </span>
-    </div>
-);
+        </div>
+    );
+};
 
 Todo.propTypes = {
     todo: PropTypes.instanceOf(TodoRecord).isRequired,
