@@ -15,3 +15,8 @@ const editTodo = (field) => (value) => ({
 });
 
 export const editDescription = editTodo('description');
+
+// Used for contrived example in components/Example/index
+export const fetchEmailsFromServer = () => ({
+    type: 'NOOP',
+});
