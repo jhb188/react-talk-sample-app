@@ -7,10 +7,10 @@ import Todo from './Todo';
 import TodoList from './TodoList';
 
 const props = {
-    todos: List(
+    todos: List([
         TodoRecord(),
         TodoRecord()
-    ),
+    ]),
     toggleChecked: Function.prototype,
 };
 
