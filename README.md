@@ -1,5 +1,10 @@
 # Writing a react app
 
+## Bootstrapping with [create-react-app](https://github.com/facebookincubator/create-react-app)
+- Created by Facebook
+- Slogan "Create React apps with no build configuration."
+- Saves the hassle of setting up webpack, task runner, dev server, test framework, etc.
+
 ## Before Redux
 - Local state in each component
 - Communication between components done through refs
@@ -26,5 +31,19 @@
       - Easier to reason about
         - State is contained within the application rather than in individual components
         - Data flows one direction throughout your application
-        - Debugging is much easier
-    
+        - Debugging is much easier 
+        
+## Testing
+- Each component has it's own test
+- Since components are pure testing is simplified
+- Use the Jest test runner
+  - Node based
+  - Allows mocking functions
+  - Has `expect` assertion functions built in
+  - Unit testing (not end to end)
+- Very [basic tests](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#testing-components) are easy to implement and can provide some safety with very little effor.
+
+## Deployment
+- Use S3 as your webserver
+  - Handles versioning and scaling
+  - Brians can provide more detail later or maybe give a separate talk
